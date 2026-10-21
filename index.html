@@ -410,7 +410,7 @@ const I18N={
   yearLead:'Ogni colonna è la temperatura operativa massima di un mese. Più alta e più chiara significa più calda. Ruota il paesaggio, passa sopra una colonna, clicca per scegliere la variante.',
   hintCol:'trascina per ruotare · clicca una colonna',flatH:'La stessa cosa, in piano',
   tabH:'Tutti i numeri',
-  tabNote:`Clicca un'intestazione per ordinare, una riga per selezionare. In verde il valore migliore fra le varianti con aperture (V0 esclusa). *) ore d'uso 09–22, periodo 16.04.–15.10.; curva limite: SIA 180:2014, 2.2, Figur 3; Anhang C. **) classe IDA 3 (CO₂): ≤ 1’750 ppm, SIA 382/1:2025, Tabelle 18.`,
+  tabNote:`Clicca un'intestazione per ordinare, una riga per selezionare. In verde il valore migliore fra le varianti con aperture (V0 esclusa). *) ore d'uso 09–22, periodo 16.04.–15.10.; curva limite: SIA 180:2014, 2.2, Figur 3; Allegati, A1. **) classe IDA 3 (CO₂): ≤ 1’750 ppm, SIA 382/1:2025, Tabelle 18.`,
   limH:'Prima di citare questi numeri',assH:'Assunzioni non documentate',
   as1:'B4, trasmissione solare del vetro τe 0.22 (ANNAHME): scalata dal vetro attuale, manca una scheda tecnica.',
   as2:'B2 / B2c, riflessione del tessuto ρe 0.40 (ANNAHME), da cui g totale 0.08 con telo abbassato.',
@@ -502,7 +502,7 @@ const I18N={
   yearLead:'Jede Säule ist die maximale operative Temperatur eines Monats. Höher und heller heisst wärmer. Drehen Sie die Landschaft, fahren Sie über eine Säule, klicken Sie, um die Variante zu wählen.',
   hintCol:'ziehen zum Drehen · Säule anklicken',flatH:'Dasselbe in 2D',
   tabH:'Alle Zahlen',
-  tabNote:`Klicken Sie auf eine Überschrift zum Sortieren, auf eine Zeile zum Auswählen. Grün: bester Wert unter den Varianten mit Öffnungen (ohne V0). *) Nutzungsstunden 09–22, Zeitraum 16.04.–15.10.; Grenzkurve: SIA 180:2014, 2.2, Figur 3; Anhang C. **) Klasse IDA 3 (CO₂): ≤ 1’750 ppm, SIA 382/1:2025, Tabelle 18.`,
+  tabNote:`Klicken Sie auf eine Überschrift zum Sortieren, auf eine Zeile zum Auswählen. Grün: bester Wert unter den Varianten mit Öffnungen (ohne V0). *) Nutzungsstunden 09–22, Zeitraum 16.04.–15.10.; Grenzkurve: SIA 180:2014, 2.2, Figur 3; Anhang, A1. **) Klasse IDA 3 (CO₂): ≤ 1’750 ppm, SIA 382/1:2025, Tabelle 18.`,
   limH:'Bevor Sie diese Zahlen zitieren',assH:'Nicht dokumentierte Annahmen',
   as1:'B4, solare Transmission des Glases τe 0.22 (ANNAHME): vom heutigen Glas skaliert, ein Datenblatt fehlt.',
   as2:'B2 / B2c, Reflexion des Gewebes ρe 0.40 (ANNAHME), daraus g total 0.08 mit heruntergefahrener Markise.',
@@ -647,7 +647,7 @@ const METRICS={
  over:{l:{it:'Ore sopra la curva',de:'Stunden über der Kurve'},u:'h',d:0,max:150,note:{it:`Ore d'uso (09–22) fra il 16.04. e il 15.10. in cui la temperatura operativa, nella posizione di chi arrampica a 6 m, supera la curva limite di SIA 180. Meno è meglio, l'obiettivo è 0.`,de:`Nutzungsstunden (09–22) vom 16.04. bis 15.10., in denen die operative Temperatur an der Position der Kletternden (6 m) die Grenzkurve SIA 180 überschreitet. Weniger ist besser, Ziel ist 0.`}},
  tmax:{l:{it:'Temperatura massima',de:'Maximale Temperatur'},u:'°C',d:1,max:40,note:{it:`Temperatura operativa più alta dell'anno nelle ore d'uso. Meno è meglio.`,de:`Höchste operative Temperatur des Jahres in den Nutzungsstunden. Weniger ist besser.`}},
  heat:{l:{it:'Riscaldamento',de:'Heizwärmebedarf'},u:'kWh/a',d:0,max:3000,note:{it:`Fabbisogno annuo del riscaldatore ideale della sala (setpoint 18 °C): cosa costa d'inverno ogni misura contro il sole.`,de:`Jährlicher Bedarf der idealen Heizung der Halle (Sollwert 18 °C): was jede Massnahme gegen die Sonne im Winter kostet.`}},
- under:{l:{it:'Ore troppo fresche',de:'Zu kühle Stunden'},u:'h',d:0,max:200,note:{it:`Ore d'uso estive sotto la curva inferiore di SIA 180, in maggio e ottobre. Accettate per una sala sportiva.`,de:`Sommerliche Nutzungsstunden unter der unteren Grenzkurve SIA 180, im Mai und Oktober. Für eine Sporthalle akzeptiert.`}},
+ under:{l:{it:'Ore troppo fresche',de:'Zu kühle Stunden'},u:'h',d:0,max:200,note:{it:`Ore d'uso estive sotto la curva inferiore di SIA 180, soprattutto in primavera e autunno, in media 0.2 K sotto la curva. Accettabili per chi arrampica (5 met invece di 1.2 met).`,de:`Sommerliche Nutzungsstunden unter der unteren Grenzkurve SIA 180, vor allem im Frühling und Herbst, im Mittel 0.2 K unter der Kurve. Für Kletternde vertretbar (5 met statt 1.2 met).`}},
  co2:{l:{it:'CO₂ massimo',de:'Maximales CO₂'},u:'ppm',d:0,max:1800,lim:1750,note:{it:`Valore più alto dell'anno. La linea rossa è il limite della classe IDA 3 (1’750 ppm).`,de:`Höchster Wert des Jahres. Die rote Linie ist die Grenze der Klasse IDA 3 (1’750 ppm).`}}
 };
 let metric='over',sel='B2c',cmp='B2c',mode='var',cut=false,tourOn=false;
